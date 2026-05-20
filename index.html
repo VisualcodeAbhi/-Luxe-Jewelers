@@ -46,26 +46,68 @@
     <section class="featured-section">
         <div class="container">
             <h2 class="section-title">Featured Collections</h2>
+            
+            <!-- Category Filter -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="rings">Rings</button>
+                <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+                <button class="filter-btn" data-filter="watches">Watches</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+            </div>
+
             <div class="featured-grid">
-                <div class="featured-card">
+                <div class="featured-card" data-category="rings">
                     <div class="card-icon">💍</div>
                     <h3>Engagement Rings</h3>
                     <p>Symbolize your eternal love with our stunning diamond rings</p>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9 (128 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">From $1,299</span>
+                        <span class="price-note">Free Shipping</span>
+                    </div>
                 </div>
-                <div class="featured-card">
+                <div class="featured-card" data-category="necklaces">
                     <div class="card-icon">📿</div>
                     <h3>Gold Necklaces</h3>
                     <p>Elegant designs crafted with the finest gold and precious stones</p>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.8 (96 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">From $899</span>
+                        <span class="price-note">18K Gold</span>
+                    </div>
                 </div>
-                <div class="featured-card">
+                <div class="featured-card" data-category="watches">
                     <div class="card-icon">✨</div>
                     <h3>Luxury Watches</h3>
                     <p>Premium timepieces that blend sophistication with precision</p>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0 (84 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">From $2,499</span>
+                        <span class="price-note">Swiss Movement</span>
+                    </div>
                 </div>
-                <div class="featured-card">
+                <div class="featured-card" data-category="bridal">
                     <div class="card-icon">👑</div>
                     <h3>Bridal Collection</h3>
                     <p>Complete bridal jewelry sets for your special day</p>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9 (156 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">From $3,199</span>
+                        <span class="price-note">Complete Set</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,8 +177,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>Luxe Jewelers</h3>
-                    <p>Crafting timeless elegance since 1995. Your trusted partner for fine jewelry.</p>
+                    <h3>✦ Luxe Jewelers</h3>
+                    <p>Crafting timeless elegance since 1995. Your trusted partner for fine jewelry and unforgettable moments.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">📌</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -149,19 +197,29 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>📍 123 Luxury Lane, Diamond District</p>
-                    <p>📞 (555) 123-4567</p>
-                    <p>✉️ info@luxejewelers.com</p>
+                    <ul class="footer-contact">
+                        <li>📍 123 Luxury Lane, Diamond District, NY 10001</li>
+                        <li>📞 <a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li>✉️ <a href="mailto:info@luxejewelers.com">info@luxejewelers.com</a></li>
+                        <li>🌐 <a href="#">www.luxejewelers.com</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Business Hours</h3>
-                    <p>Mon - Fri: 10AM - 7PM</p>
-                    <p>Saturday: 10AM - 6PM</p>
-                    <p>Sunday: Closed</p>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday:</span> <strong>10:00 AM - 7:00 PM</strong></li>
+                        <li><span>Saturday:</span> <strong>10:00 AM - 6:00 PM</strong></li>
+                        <li><span>Sunday:</span> <strong>Closed</strong></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Luxe Jewelers. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>

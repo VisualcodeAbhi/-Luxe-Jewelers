@@ -1,4 +1,37 @@
 // ===================================
+// PRODUCT FILTER FUNCTIONALITY
+// ===================================
+const filterButtons = document.querySelectorAll('.filter-btn');
+const featuredCards = document.querySelectorAll('.featured-card');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Get filter value
+            const filterValue = button.getAttribute('data-filter');
+            
+            // Filter cards
+            featuredCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    card.classList.remove('hidden');
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+// ===================================
 // MOBILE MENU TOGGLE
 // ===================================
 const hamburger = document.getElementById('hamburger');
@@ -181,10 +214,10 @@ const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll <= 0) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.2)';
+        navbar.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;

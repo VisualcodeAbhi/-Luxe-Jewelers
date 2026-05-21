@@ -3,20 +3,21 @@
 // ===================================
 const filterButtons = document.querySelectorAll('.filter-btn');
 const featuredCards = document.querySelectorAll('.featured-card');
+const productCards = document.querySelectorAll('.product-card');
+const sortSelect = document.getElementById('sortProducts');
+const productsGrid = document.getElementById('productsGrid');
+const noResults = document.getElementById('noResults');
+const productCount = document.getElementById('productCount');
 
-if (filterButtons.length > 0) {
+// Filter functionality for featured cards (index.html)
+if (filterButtons.length > 0 && featuredCards.length > 0) {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
             button.classList.add('active');
             
-            // Get filter value
             const filterValue = button.getAttribute('data-filter');
             
-            // Filter cards
             featuredCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 
@@ -29,6 +30,84 @@ if (filterButtons.length > 0) {
             });
         });
     });
+}
+
+// Filter functionality for products page
+if (filterButtons.length > 0 && productCards.length > 0) {
+    let currentFilter = 'all';
+    let currentSort = 'default';
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            currentFilter = button.getAttribute('data-filter');
+            filterAndSortProducts(currentFilter, currentSort);
+        });
+    });
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', () => {
+            currentSort = sortSelect.value;
+            filterAndSortProducts(currentFilter, currentSort);
+        });
+    }
+
+    function filterAndSortProducts(filter, sort) {
+        let visibleProducts = [];
+
+        // Filter products
+        productCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category === filter) {
+                card.classList.remove('hidden');
+                visibleProducts.push(card);
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // Sort products
+        if (sort !== 'default' && visibleProducts.length > 0) {
+            const productsArray = Array.from(visibleProducts);
+            
+            productsArray.sort((a, b) => {
+                switch(sort) {
+                    case 'price-low':
+                        return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
+                    case 'price-high':
+                        return parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price'));
+                    case 'rating':
+                        return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+                    case 'newest':
+                        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-append sorted products
+            productsArray.forEach(product => {
+                productsGrid.appendChild(product);
+            });
+        }
+
+        // Update product count
+        if (productCount) {
+            productCount.textContent = visibleProducts.length;
+        }
+
+        // Show/hide no results message
+        if (noResults) {
+            if (visibleProducts.length === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+    }
 }
 
 // ===================================

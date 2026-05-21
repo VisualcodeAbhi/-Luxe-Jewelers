@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Luxe Jewelers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>✦ Luxe Jewelers</h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore Our Exquisite Collection of Fine Jewelry</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-main-section">
+        <div class="container">
+            <!-- Filters & Sort -->
+            <div class="products-controls">
+                <div class="filter-section">
+                    <h3>Filter by Category</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="rings">Rings</button>
+                        <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+                        <button class="filter-btn" data-filter="earrings">Earrings</button>
+                        <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+                        <button class="filter-btn" data-filter="watches">Watches</button>
+                        <button class="filter-btn" data-filter="bridal">Bridal</button>
+                    </div>
+                </div>
+
+                <div class="sort-section">
+                    <h3>Sort By</h3>
+                    <select id="sortProducts" class="sort-select">
+                        <option value="default">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Rings -->
+                <div class="product-card" data-category="rings" data-price="1299" data-rating="4.9" data-date="2026-01">
+                    <div class="product-image">💍</div>
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Diamond Solitaire Ring</h3>
+                        <p class="product-desc">18K white gold with 1ct brilliant cut diamond</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (128)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,299</span>
+                            <span class="original-price">$1,599</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="rings" data-price="899" data-rating="4.7" data-date="2026-02">
+                    <div class="product-image">💎</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sapphire Halo Ring</h3>
+                        <p class="product-desc">Blue sapphire surrounded by diamond halo</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.7 (94)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$899</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="rings" data-price="2499" data-rating="5.0" data-date="2026-03">
+                    <div class="product-image">✨</div>
+                    <div class="product-badge">Premium</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Emerald Cut Diamond Ring</h3>
+                        <p class="product-desc">2ct emerald cut diamond in platinum setting</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (67)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$2,499</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Necklaces -->
+                <div class="product-card" data-category="necklaces" data-price="1599" data-rating="4.8" data-date="2026-01">
+                    <div class="product-image">📿</div>
+                    <div class="product-badge">Popular</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Gold Chain Necklace</h3>
+                        <p class="product-desc">18K yellow gold, 18-inch Italian chain</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.8 (156)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,599</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="necklaces" data-price="2199" data-rating="4.9" data-date="2026-02">
+                    <div class="product-image">💫</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Diamond Pendant Necklace</h3>
+                        <p class="product-desc">Platinum chain with 0.5ct diamond pendant</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (112)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$2,199</span>
+                            <span class="original-price">$2,599</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="necklaces" data-price="899" data-rating="4.6" data-date="2026-03">
+                    <div class="product-image">🌟</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pearl Strand Necklace</h3>
+                        <p class="product-desc">Akoya cultured pearls with gold clasp</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.6 (89)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$899</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Earrings -->
+                <div class="product-card" data-category="earrings" data-price="799" data-rating="4.8" data-date="2026-01">
+                    <div class="product-image">✨</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Diamond Stud Earrings</h3>
+                        <p class="product-desc">0.5ct total weight, 14K white gold</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.8 (203)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$799</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="earrings" data-price="1299" data-rating="4.9" data-date="2026-02">
+                    <div class="product-image">💎</div>
+                    <div class="product-badge">New</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Ruby Drop Earrings</h3>
+                        <p class="product-desc">Natural rubies with diamond accents</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (76)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,299</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="earrings" data-price="599" data-rating="4.7" data-date="2026-03">
+                    <div class="product-image">🌙</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Gold Hoop Earrings</h3>
+                        <p class="product-desc">Classic 18K gold hoops, medium size</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.7 (145)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$599</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Bracelets -->
+                <div class="product-card" data-category="bracelets" data-price="1899" data-rating="4.9" data-date="2026-01">
+                    <div class="product-image">⭐</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tennis Bracelet</h3>
+                        <p class="product-desc">3ct total diamond weight in white gold</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (98)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,899</span>
+                            <span class="original-price">$2,199</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bracelets" data-price="699" data-rating="4.6" data-date="2026-02">
+                    <div class="product-image">🌸</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Charm Bracelet</h3>
+                        <p class="product-desc">Sterling silver with 5 interchangeable charms</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.6 (134)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$699</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bracelets" data-price="1499" data-rating="4.8" data-date="2026-03">
+                    <div class="product-image">💫</div>
+                    <div class="product-badge">Limited</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Gold Bangle Bracelet</h3>
+                        <p class="product-desc">18K rose gold with diamond accents</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.8 (87)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,499</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Watches -->
+                <div class="product-card" data-category="watches" data-price="3499" data-rating="5.0" data-date="2026-01">
+                    <div class="product-image">⌚</div>
+                    <div class="product-badge">Luxury</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Swiss Automatic Watch</h3>
+                        <p class="product-desc">Swiss movement, sapphire crystal, leather strap</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (54)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$3,499</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="watches" data-price="2499" data-rating="4.9" data-date="2026-02">
+                    <div class="product-image">⏱️</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Diamond Bezel Watch</h3>
+                        <p class="product-desc">Stainless steel with diamond-encrusted bezel</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (72)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$2,499</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="watches" data-price="1899" data-rating="4.7" data-date="2026-03">
+                    <div class="product-image">🕰️</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Classic Gold Watch</h3>
+                        <p class="product-desc">18K gold-plated with genuine leather band</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.7 (118)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$1,899</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Bridal -->
+                <div class="product-card" data-category="bridal" data-price="3199" data-rating="5.0" data-date="2026-01">
+                    <div class="product-image">👑</div>
+                    <div class="product-badge">Bridal Set</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Complete Bridal Set</h3>
+                        <p class="product-desc">Necklace, earrings, bracelet, and tiara</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (156)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$3,199</span>
+                            <span class="original-price">$3,999</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bridal" data-price="2899" data-rating="4.9" data-date="2026-02">
+                    <div class="product-image">💒</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Wedding Band Pair</h3>
+                        <p class="product-desc">Matching his & hers 18K gold bands</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9 (142)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$2,899</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bridal" data-price="4299" data-rating="5.0" data-date="2026-03">
+                    <div class="product-image">💝</div>
+                    <div class="product-badge">Premium</div>
+                    <div class="product-info">
+                        <h3 class="product-name">Luxury Bridal Collection</h3>
+                        <p class="product-desc">Diamond tiara, necklace, and earrings set</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (89)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">$4,299</span>
+                        </div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>No products found matching your criteria.</p>
+            </div>
+
+            <!-- Product Count -->
+            <div class="product-count">
+                <p>Showing <span id="productCount">18</span> products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>We offer custom jewelry design services to create your perfect piece</p>
+            <a href="contact.html" class="btn btn-primary">Request Custom Design</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>✦ Luxe Jewelers</h3>
+                    <p>Crafting timeless elegance since 1995. Your trusted partner for fine jewelry and unforgettable moments.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">📌</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>📍 123 Luxury Lane, Diamond District, NY 10001</li>
+                        <li>📞 <a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li>✉️ <a href="mailto:info@luxejewelers.com">info@luxejewelers.com</a></li>
+                        <li>🌐 <a href="#">www.luxejewelers.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday:</span> <strong>10:00 AM - 7:00 PM</strong></li>
+                        <li><span>Saturday:</span> <strong>10:00 AM - 6:00 PM</strong></li>
+                        <li><span>Sunday:</span> <strong>Closed</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxe Jewelers. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

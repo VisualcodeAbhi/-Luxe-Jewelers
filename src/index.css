@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  
+  --color-gold: #c5a059;
+  --color-gold-hover: #b48e47;
+  --color-charcoal: #0d0d0d;
+  --color-velvet: #121212;
+  --color-platinum: #e5e7eb;
+}
+
+:root {
+  --primary-color: #c5a059;
+  --bg-dark: #070707;
+  --bg-velvet: #0d0d0d;
+  --gold-glow: 0 0 20px rgba(197, 160, 89, 0.4);
+  --glass-bg: rgba(13, 13, 13, 0.7);
+  --glass-border: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-dark);
+  color: #f3f4f6;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1, h2, h3, h4, .font-serif-lux {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.05em;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: var(--glass-border);
+}
+
+.glass-nav {
+  background: rgba(7, 7, 7, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+}
+
+/* Glow Borders & Ambient Shimmer */
+.gold-glow-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: var(--gold-glow);
+  border-color: var(--primary-color);
+}
+
+/* Diagonal Gold Light-Sweep Reflection */
+.shimmer-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(197, 160, 89, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shimmer-container:hover::after {
+  left: 120%;
+  opacity: 1;
+}
+
+/* Double Leaf Gold Editorial Frame */
+.gold-leaf-frame {
+  position: relative;
+  padding: 1rem;
+}
+
+.gold-leaf-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--primary-color);
+  pointer-events: none;
+}
+
+.gold-leaf-frame::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  pointer-events: none;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+  border: 2px solid #070707;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Hide Default Cursor (Optional, handled in React to show custom cursor) */
+@media (min-width: 1024px) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active select,
+  .custom-cursor-active input,
+  .custom-cursor-active [role="button"] {
+    cursor: none;
+  }
+}
